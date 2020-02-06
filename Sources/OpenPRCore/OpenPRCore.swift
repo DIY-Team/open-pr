@@ -1,6 +1,6 @@
 import Foundation
 
-public final class OpenPRCore {
+public final class OpenPR {
     private let arguments: [String]
 
     public init(arguments: [String] = CommandLine.arguments) {
