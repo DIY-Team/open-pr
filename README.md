@@ -4,6 +4,5 @@ Swift tool to open a PR from command line. The command will open a new window (o
 # WIP
 Please note that the work on this tool is currently in progress.
 
-
 # Usage
 Type `open-pr` in the folder directory from terminal. It will take you to the browser on "create new PR" page.
