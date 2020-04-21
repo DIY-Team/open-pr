@@ -7,18 +7,6 @@
 
 import Foundation
 
-struct RepoInfo {
-    var remoteURL: String
-    var client: GitClient
-    var accessType: AccessType
-    
-    init(with url: String) {
-        remoteURL = url
-        accessType = AccessType.accessType(from: url)
-        client = GitClient.clientType(from: url, accessType: accessType)
-    }
-}
-
 enum AccessType: String, CaseIterable {
     case ssh = "git@"
     case https = "https://"
@@ -50,5 +38,13 @@ enum GitClient: String, CaseIterable {
             }
         }
         return .unknown
+    }
+
+    var newPRURLComponent: String {
+        switch self {
+        case .github: return "pull/new/"
+        case .bitbucket: return "TO BE UPDATED"
+        case .unknown: return ""
+        }
     }
 }
