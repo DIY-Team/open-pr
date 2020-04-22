@@ -27,10 +27,6 @@ enum GitClient: String, CaseIterable {
     case bitbucket = "bitbucket.org"
     case unknown
     
-    func urlForNewPullRequest(sourceBranch: String) -> String {
-        return ""
-    }
-    
     static func clientType(from url: String, accessType: AccessType) -> GitClient {
         for client in GitClient.allCases {
             if url.hasPrefix(accessType.rawValue + client.rawValue) {
