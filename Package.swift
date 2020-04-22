@@ -6,12 +6,13 @@ import PackageDescription
 let package = Package(
     name: "OpenPR",
     dependencies: [
+        .package(url: "https://github.com/DIY-Team/install-swift-script.git", from: "0.0.1")
     ],
     targets: [
         .target(
             name: "OpenPRCore"),
         .target(
             name: "OpenPR",
-            dependencies: ["OpenPRCore"])
+            dependencies: ["OpenPRCore", "InstallSwiftScriptCore"])
     ]
 )
