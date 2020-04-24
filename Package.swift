@@ -6,13 +6,14 @@ import PackageDescription
 let package = Package(
     name: "OpenPR",
     dependencies: [
-        .package(url: "https://github.com/DIY-Team/install-swift-script.git", from: "0.0.1")
+        .package(url: "https://github.com/DIY-Team/install-swift-script.git", from: "0.0.1"),
+        .package(url: "https://github.com/DIY-Team/RunsShellCommand", from: "0.0.1")
     ],
     targets: [
         .target(
-            name: "OpenPRCore"),
-        .target(
             name: "OpenPR",
-            dependencies: ["OpenPRCore", "InstallSwiftScriptCore"])
+            dependencies: ["OpenPRCore", "InstallSwiftScriptCore"]),
+        .target(
+            name: "OpenPRCore", dependencies: ["RunsShellCommand"])
     ]
 )
