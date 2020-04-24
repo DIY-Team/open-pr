@@ -16,19 +16,13 @@ Next:
 
 **Method 1:**
 install using command:
-`swift run OpenPR --install`
+`swift run Install`
 
 By default the tool is named as `open-pr`. If you wish to keep a different name, use something like this:
-`swift run OpenPR --install <desired-name>`
+`swift run Install <desired-name>`
 
 **Method 2:**
 run `sh install.sh`
-
-**Method 3: Using install-ss**
-If you have already installed the swift script installer. ( https://github.com/DIY-Team/install-swift-script ).
-
-use install-ss command to provide the name to your tool:  
-`install-ss OpenPr <desired-name>`
 
 
 # Uninstallation
