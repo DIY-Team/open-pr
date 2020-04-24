@@ -12,8 +12,11 @@ let package = Package(
     targets: [
         .target(
             name: "OpenPR",
-            dependencies: ["OpenPRCore", "InstallSwiftScriptCore"]),
+            dependencies: ["OpenPRCore"]),
         .target(
-            name: "OpenPRCore", dependencies: ["RunsShellCommand"])
+            name: "OpenPRCore", dependencies: ["RunsShellCommand"]),
+        .target(
+            name: "Install",
+            dependencies: ["InstallSwiftScriptCore"])
     ]
 )
