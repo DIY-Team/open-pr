@@ -25,9 +25,9 @@ struct RepoInfo {
             /// https://github.com/Organisation/repo/
             /// and then the new PR components are added furhter
             let baseURL = remoteURL.replacingOccurrences(of: accessType.rawValue + client.rawValue + ":", with: AccessType.https.rawValue + client.rawValue + "/")
-            return baseURL + client.newPRURLComponent + source
+            return baseURL + client.sourceBranchComponents + source
         } else {
-            return remoteURL + client.newPRURLComponent + source
+            return remoteURL + client.sourceBranchComponents + source
         }
     }
 }
