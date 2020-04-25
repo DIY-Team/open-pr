@@ -36,7 +36,7 @@ enum GitClient: String, CaseIterable {
         return .unknown
     }
 
-    var newPRURLComponent: String {
+    var sourceBranchComponents: String {
         switch self {
         case .github: return "pull/new/"
         case .bitbucket: return "TO BE UPDATED"
